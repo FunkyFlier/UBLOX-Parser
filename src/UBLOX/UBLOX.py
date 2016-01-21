@@ -100,8 +100,10 @@ while True:
             sumCalcB = sumCalcB & 0xFF
             print (sumCalcA,sumCalcB,sumRcvdA,sumRcvdB)
             if (sumCalcA == sumRcvdA) and (sumCalcB == sumRcvdB):
+                print "sums match"
+                #print ubloxList
                 #unpack the data from the list
-                #ubloxTouple = struct.unpack('LHBBBBBBLlBBBBllLLlllllLLH',ubloxList[0,77])
+                ubloxTouple = struct.unpack('LHBBBBBBLlBBBBllllLLlllllLLH',ubloxList[0:78])
                 print ubloxTouple
             ubloxState = 0
             print "7"
